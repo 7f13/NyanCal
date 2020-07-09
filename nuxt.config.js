@@ -29,7 +29,12 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['ant-design-vue/dist/antd.css'],
+  css: [
+    {
+      src: 'ant-design-vue/dist/antd.less',
+      lang: 'less',
+    },
+  ],
   /*
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
@@ -56,6 +61,8 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'nuxt-fontawesome',
+    'nuxt-svg-loader',
   ],
   /*
    ** Axios module configuration
@@ -66,5 +73,21 @@ export default {
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {},
+  build: {
+    loaders: {
+      less: {
+        modifyVars: {
+          'primary-color': 'rgb(254, 194, 18)',
+        },
+      },
+    },
+  },
+  fontawesome: {
+    imports: [
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['fas'],
+      },
+    ],
+  },
 }

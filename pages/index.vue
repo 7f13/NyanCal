@@ -1,29 +1,23 @@
 <template>
   <div class="container">
+    <h1 class="app-title">猫のカロリー計算アプリ✨</h1>
     <div>
-      <Logo />
-      <h1 class="title">
-        nekow
-      </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <img
+        src="~/assets/60135.jpg"
+        alt="キャットフードの画像"
+        class="top-visual-image"
+      />
     </div>
+    <div class="app-description">
+      おうちの猫に、適切なカロリーを計算してみましょう
+    </div>
+    <nuxt-link to="/calculate-calorie">
+      <div class="button">
+        <span>
+          はじめる
+        </span>
+      </div>
+    </nuxt-link>
   </div>
 </template>
 
@@ -31,35 +25,43 @@
 export default {}
 </script>
 
-<style>
+<style lang="scss" scoped>
 .container {
   margin: 0 auto;
-  min-height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-}
+  overflow: hidden;
+  color: black;
+  padding: 0 2rem;
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  .app-title {
+    font-size: 1.7rem;
+    font-weight: 800;
+  }
+  img {
+    width: 60%;
+    height: auto;
+    max-width: 600px;
+  }
+  .app-description {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .button {
+    min-width: 200px;
+    min-height: 30px;
+    padding: 14px;
+    background-color: rgb(254, 194, 18);
+    border-radius: 26px;
+    font-weight: 600;
+    color: black;
+  }
 }
 </style>

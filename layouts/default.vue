@@ -1,35 +1,117 @@
 <template>
   <a-layout>
     <a-layout-header>
-      <h1 class="logo">LOGO</h1>
+      <nuxt-link to="/">
+        <div style="display: flex; align-items: center;">
+          <logo-icon class="logo-icon" />
+          <h1 class="logo">にゃんかる</h1>
+        </div>
+      </nuxt-link>
+      <font-awesome-icon icon="question-circle" class="info-icon" />
     </a-layout-header>
     <a-layout-content>
       <Nuxt />
     </a-layout-content>
-    <a-layout-footer>Footer</a-layout-footer>
+    <a-layout-footer>
+      <div class="footer-inner-container">
+        <nuxt-link to="/">
+          利用規約
+        </nuxt-link>
+        <nuxt-link to="/">
+          著作権について
+        </nuxt-link>
+        <nuxt-link to="/">
+          お問い合わせ
+        </nuxt-link>
+      </div>
+    </a-layout-footer>
   </a-layout>
 </template>
-
-<style lang="sass">
-html
-  font-size: 16px
-  word-spacing: 1px
-  -ms-text-size-adjust: 100%
-  -webkit-text-size-adjust: 100%
-  -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
-  box-sizing: border-box
-
+<script>
+import LogoIcon from '~/assets/cat.svg'
+export default {
+  components: {
+    'logo-icon': LogoIcon,
+  },
+  head() {
+    return {
+      link: [
+        {
+          rel: 'stylesheet',
+          href:
+            'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&display=swap',
+        },
+      ],
+    }
+  },
+}
+</script>
+<style lang="scss">
+html {
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
 *,
 *::before,
-*::after
-  box-sizing: border-box
-  margin: 0
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+.ant-layout {
+  font-family: 'M PLUS 1p', sans-serif;
+  height: 120vh;
+  .ant-layout-header {
+    background-color: rgb(255, 255, 255);
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
 
-.ant-layout-header
-  background-color: rgb(230, 230, 230)
-</style>
-<style lang="sass" scoped>
-.logo
-  font-weight:500
+    .logo {
+      font-weight: 500;
+      margin: 0;
+      color: black;
+    }
+    .logo-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 0.3rem;
+    }
+    .info-icon {
+      font-size: 24px;
+      font-weight: 600;
+      color: rgb(254, 194, 18);
+    }
+  }
+  .ant-layout-content {
+    background-color: #fff;
+  }
+  a {
+    color: black;
+  }
+  .ant-layout-footer {
+    height: 20vh;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .footer-inner-container {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+      a {
+        color: rgb(92, 92, 92);
+      }
+    }
+  }
+}
 </style>
