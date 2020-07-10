@@ -101,20 +101,22 @@ html {
   .ant-layout-footer {
     height: 20vh;
     background-color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     .footer-inner-container {
       display: flex;
       justify-content: space-between;
       width: 100%;
-      max-width: 400px;
+      max-width: 500px;
       margin: 0 auto;
       a {
         color: rgb(92, 92, 92);
+        white-space: nowrap;
       }
     }
   }
+}
+.ant-select-selection-selected-value {
+  text-align: left;
+  width: 100%;
 }
 </style>

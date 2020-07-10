@@ -23,12 +23,10 @@
           ねこの重さ
         </div>
         <div style="display: flex; flex-direction: start; align-items: center;">
-          <a-input-number
+          <a-input
+            type="number"
             :value="weight"
             @change="handleWeightChange"
-            :min="0"
-            :max="10"
-            :step="0.1"
             size="large"
           />
           <span style="padding-left: 8px;">Kg</span>
@@ -43,7 +41,7 @@
           @change="handleBcsChange"
           default-value="default"
           size="large"
-          style="width: 200px;"
+          style="width: 100%;"
         >
           <a-select-option value="bcs3">
             ふつう体型

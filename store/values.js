@@ -9,8 +9,8 @@ export const state = () => ({
 })
 
 export const mutations = {
-  handleWeightChange(state, value) {
-    state.weight = value
+  handleWeightChange(state, event) {
+    state.weight = event.target.value
   },
   handleBcsChange(state, value) {
     state.bcs = value
