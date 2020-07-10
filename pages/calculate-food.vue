@@ -10,7 +10,10 @@
         </h1>
         <span>g</span>
         <div>
-          <nuxt-link to="/" style="font-size: 12px; color: rgb(143, 143, 143);">
+          <nuxt-link
+            to="/about-calculation"
+            style="font-size: 12px; color: rgb(143, 143, 143);"
+          >
             計算式について
           </nuxt-link>
         </div>
@@ -88,7 +91,7 @@ export default {
 <style lang="scss" scoped>
 .container {
   margin: 0 auto;
-  height: 100%;
+  height: 93vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

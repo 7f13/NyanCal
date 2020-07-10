@@ -7,7 +7,10 @@
           <h1 class="logo">にゃんかる</h1>
         </div>
       </nuxt-link>
-      <font-awesome-icon icon="question-circle" class="info-icon" />
+      <div class="header-howto">
+        <font-awesome-icon icon="question-circle" class="info-icon" />
+        <span>使い方</span>
+      </div>
     </a-layout-header>
     <a-layout-content>
       <Nuxt />
@@ -20,9 +23,9 @@
         <nuxt-link to="/">
           著作権について
         </nuxt-link>
-        <nuxt-link to="/">
+        <a href="https://twitter.com/NeoSavage_" target="_blank">
           お問い合わせ
-        </nuxt-link>
+        </a>
       </div>
     </a-layout-footer>
   </a-layout>
@@ -64,7 +67,6 @@ html {
 }
 .ant-layout {
   font-family: 'M PLUS 1p', sans-serif;
-  height: 120vh;
   .ant-layout-header {
     background-color: rgb(255, 255, 255);
     color: black;
@@ -72,7 +74,7 @@ html {
     justify-content: space-between;
     align-items: center;
     padding: 0 16px;
-
+    height: 7vh;
     .logo {
       font-weight: 500;
       margin: 0;
@@ -83,10 +85,22 @@ html {
       height: 24px;
       margin-right: 0.3rem;
     }
-    .info-icon {
-      font-size: 24px;
-      font-weight: 600;
-      color: rgb(254, 194, 18);
+    .header-howto {
+      display: flex;
+      align-items: center;
+      margin-right: 10px;
+      cursor: pointer;
+      &:hover {
+        span {
+          text-decoration: underline;
+        }
+      }
+      .info-icon {
+        margin-right: 4px;
+        font-size: 18px;
+        font-weight: 600;
+        color: rgb(254, 194, 18);
+      }
     }
   }
   .ant-layout-content {

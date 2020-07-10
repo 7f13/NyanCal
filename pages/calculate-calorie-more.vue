@@ -18,6 +18,7 @@
           </nuxt-link>
         </div>
       </div>
+
       <div class="input-item">
         <div style="margin-bottom: 0.3rem; text-align: left;">
           ねこの重さ
@@ -33,6 +34,43 @@
           />
           <span style="padding-left: 8px;">Kg</span>
         </div>
+      </div>
+      <div class="input-item">
+        <div style="margin-bottom: 0.3rem; text-align: left;">
+          ねこのライフステージ
+        </div>
+        <a-select
+          :value="lifeStage"
+          @change="handleLifeStageChange"
+          default-value="default"
+          size="large"
+          style="width: 225px;"
+        >
+          <a-select-option value="before4month">
+            生後4ヶ月未満
+          </a-select-option>
+          <a-select-option value="4to6month">
+            生後4~6ヶ月
+          </a-select-option>
+          <a-select-option value="7to12month">
+            生後7~12ヶ月
+          </a-select-option>
+          <a-select-option value="notSpayedOrFixed">
+            去勢・避妊してない成猫
+          </a-select-option>
+          <a-select-option value="spayedOrFixed">
+            去勢・避妊済みの成猫
+          </a-select-option>
+          <a-select-option value="older">
+            高齢(7歳~)
+          </a-select-option>
+          <a-select-option value="pregnant">
+            妊娠中
+          </a-select-option>
+          <a-select-option value="lactating">
+            授乳中
+          </a-select-option>
+        </a-select>
       </div>
       <div class="input-item">
         <div style="margin-bottom: 0.3rem; text-align: left;">
@@ -62,14 +100,19 @@
           </a-select-option>
         </a-select>
       </div>
-      <div style="margin-bottom: 1rem;">
+      <div style="margin-bottom: 2rem;">
         <nuxt-link to="/calculate-food">
           一回に必要な餌の量も計算してみる→
         </nuxt-link>
       </div>
+      <div style="margin-bottom: 1rem;">
+        <nuxt-link to="/calculate-calorie">
+          ←戻る
+        </nuxt-link>
+      </div>
       <div>
-        <nuxt-link to="/calculate-calorie-more">
-          その他ライフステージの猫はこちら→
+        <nuxt-link to="/">
+          TOPへ
         </nuxt-link>
       </div>
     </div>
@@ -80,21 +123,25 @@
 import { mapState, mapMutations } from 'vuex'
 export default {
   computed: {
-    ...mapState('values', ['calorie', 'weight', 'bcs']),
+    ...mapState('values', ['calorie', 'weight', 'bcs', 'lifeStage']),
   },
   watch: {
     weight() {
-      this.calculateCalorie()
+      this.calculateCalorieMore()
+    },
+    lifeStage() {
+      this.calculateCalorieMore()
     },
     bcs() {
-      this.calculateCalorie()
+      this.calculateCalorieMore()
     },
   },
   methods: {
     ...mapMutations('values', [
       'handleWeightChange',
       'handleBcsChange',
-      'calculateCalorie',
+      'handleLifeStageChange',
+      'calculateCalorieMore',
     ]),
   },
 }
