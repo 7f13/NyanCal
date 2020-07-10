@@ -14,17 +14,48 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: '😸にゃんかる',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          '猫のカロリー計算アプリです✨1日に必要なカロリーを、アプリを使ってパパッと計算しましょう！',
+      },
+      {
+        hid: 'og:site_name',
+        property: 'og:site_name',
+        content: '😸にゃんかる',
+      },
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      {
+        hid: 'og:url',
+        property: 'og:url',
+        content: 'https://nyancal.netlify.app/',
+      },
+      { hid: 'og:title', property: 'og:title', content: '😸にゃんか' },
+      {
+        hid: 'og:description',
+        property: 'og:description',
+        content:
+          '猫のカロリー計算アプリです✨1日に必要なカロリーを、アプリを使ってパパッと計算しましょう！',
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: '~/assets/60135.jpg',
       },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&display=swap',
+      },
+    ],
   },
   /*
    ** Global CSS

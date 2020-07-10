@@ -36,17 +36,6 @@ export default {
   components: {
     'logo-icon': LogoIcon,
   },
-  head() {
-    return {
-      link: [
-        {
-          rel: 'stylesheet',
-          href:
-            'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&display=swap',
-        },
-      ],
-    }
-  },
 }
 </script>
 <style lang="scss">
