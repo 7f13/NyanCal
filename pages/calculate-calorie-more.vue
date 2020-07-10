@@ -18,19 +18,17 @@
           </nuxt-link>
         </div>
       </div>
-
       <div class="input-item">
         <div style="margin-bottom: 0.3rem; text-align: left;">
           ねこの重さ
         </div>
         <div style="display: flex; flex-direction: start; align-items: center;">
-          <a-input-number
+          <a-input
+            type="number"
             :value="weight"
             @change="handleWeightChange"
-            :min="0"
-            :max="10"
-            :step="0.1"
             size="large"
+            style="width: 30%; max-width: 300px;"
           />
           <span style="padding-left: 8px;">Kg</span>
         </div>
@@ -44,7 +42,7 @@
           @change="handleLifeStageChange"
           default-value="default"
           size="large"
-          style="width: 225px;"
+          style="width: 90%; max-width: 300px;"
         >
           <a-select-option value="before4month">
             生後4ヶ月未満
@@ -81,9 +79,9 @@
           @change="handleBcsChange"
           default-value="default"
           size="large"
-          style="width: 200px;"
+          style="width: 90%; max-width: 300px;"
         >
-          <a-select-option value="bcs3">
+          <a-select-option value="bcs3" style="width: 100%;">
             ふつう体型
           </a-select-option>
           <a-select-option value="bcs4">
@@ -163,7 +161,7 @@ export default {
   .input-item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin: 0 2rem 2rem 2rem;
   }
   a {
     color: rgb(92, 92, 92);
