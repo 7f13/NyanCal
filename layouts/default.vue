@@ -18,10 +18,10 @@
     <a-layout-footer>
       <div class="footer-inner-container">
         <nuxt-link to="/term-of-service">
-          利用規約
+          利用規約について
         </nuxt-link>
-        <nuxt-link to="/">
-          著作権
+        <nuxt-link to="/credit">
+          クレジット
         </nuxt-link>
         <a href="https://twitter.com/NeoSavage_" target="_blank">
           お問い合わせ
