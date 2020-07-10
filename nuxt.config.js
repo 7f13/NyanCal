@@ -14,7 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: '😸にゃんかる',
+    title: 'にゃんかる',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -22,12 +22,12 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          '猫のカロリー計算アプリです✨1日に必要なカロリーを、アプリを使ってパパッと計算しましょう！',
+          '猫のカロリー計算アプリです😸✨1日に必要なカロリーを、アプリを使ってパパッと計算しましょう！',
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: '😸にゃんかる',
+        content: 'にゃんかる',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
@@ -35,17 +35,18 @@ export default {
         property: 'og:url',
         content: 'https://nyancal.netlify.app/',
       },
-      { hid: 'og:title', property: 'og:title', content: '😸にゃんか' },
+      { hid: 'og:title', property: 'og:title', content: 'にゃんかる' },
       {
         hid: 'og:description',
         property: 'og:description',
         content:
-          '猫のカロリー計算アプリです✨1日に必要なカロリーを、アプリを使ってパパッと計算しましょう！',
+          '猫のカロリー計算アプリです😸✨1日に必要なカロリーを、アプリを使ってパパッと計算しましょう！',
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: '~/assets/60135.jpg',
+        content:
+          'https://image.freepik.com/free-vector/cat-pet-shop-illustration_24877-60135.jpg',
       },
     ],
     link: [
@@ -54,6 +55,32 @@ export default {
         rel: 'stylesheet',
         href:
           'https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@300;400;500;700;800;900&display=swap',
+      },
+      {
+        rel: 'apple-touch-icon',
+        sizes: '180x180',
+        href: '/touch-icon.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '32x32',
+        href: '/favicon-32x32.png',
+      },
+      {
+        rel: 'icon',
+        type: 'image/png',
+        sizes: '16x16',
+        href: '/favicon-16x16.png',
+      },
+      {
+        rel: 'manifest',
+        href: '/site.webmanifest',
+      },
+      {
+        rel: 'mask-icon',
+        href: '/safari-pinned-tab.svg',
+        color: '#5bbad5',
       },
     ],
   },
