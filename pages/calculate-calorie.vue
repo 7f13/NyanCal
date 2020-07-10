@@ -28,6 +28,7 @@
             :value="weight"
             @change="handleWeightChange"
             size="large"
+            style="width: 30%; max-width: 300px;"
           />
           <span style="padding-left: 8px;">Kg</span>
         </div>
@@ -41,7 +42,7 @@
           @change="handleBcsChange"
           default-value="default"
           size="large"
-          style="width: 100%;"
+          style="width: 90%; max-width: 300px;"
         >
           <a-select-option value="bcs3">
             ふつう体型
@@ -114,7 +115,7 @@ export default {
   .input-item {
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
+    margin: 0 2rem 2rem 2rem;
   }
   a {
     color: rgb(92, 92, 92);

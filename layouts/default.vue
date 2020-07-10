@@ -17,7 +17,7 @@
     </a-layout-content>
     <a-layout-footer>
       <div class="footer-inner-container">
-        <nuxt-link to="/">
+        <nuxt-link to="/term-of-service">
           利用規約
         </nuxt-link>
         <nuxt-link to="/">
