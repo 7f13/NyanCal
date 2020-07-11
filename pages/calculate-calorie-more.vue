@@ -25,6 +25,9 @@
         <div style="display: flex; flex-direction: start; align-items: center;">
           <a-input
             type="number"
+            step="0.1"
+            min="0"
+            max="10"
             :value="weight"
             @change="handleWeightChange"
             size="large"

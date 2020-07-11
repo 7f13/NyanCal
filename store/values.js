@@ -15,8 +15,8 @@ export const mutations = {
   handleBcsChange(state, value) {
     state.bcs = value
   },
-  handleEatTimesChange(state, value) {
-    state.eatTimes = value
+  handleEatTimesChange(state, event) {
+    state.eatTimes = event.target.value
   },
   handleFoodCalorieChange(state, value) {
     state.foodCalorie = value
