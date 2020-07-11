@@ -30,15 +30,20 @@ export const mutations = {
     const weight = state.weight
     const bodyConditionScore = state.bcs
 
+    let coefficient = 1.0
+
     switch (bodyConditionScore) {
       case 'bcs1':
         idealWeight = weight * 1.2
+        coefficient = 1.2
         break
       case 'bcs2':
         idealWeight = weight * 1.1
+        coefficient = 1.2
         break
       case 'bcs3':
         idealWeight = weight
+        coefficient = 1.2
         break
       case 'bcs4':
         idealWeight = Math.floor((weight / 1.15) * 10) / 10
@@ -56,7 +61,10 @@ export const mutations = {
 
     const rer =
       70 * Math.sqrt(Math.sqrt(idealWeight * idealWeight * idealWeight))
-    state.calorie = Math.floor(rer)
+
+    // DER = RER x ライフステージ係数を求める
+    const der = rer * coefficient
+    state.calorie = Math.floor(der)
   },
   calculateCalorieMore(state) {
     let idealWeight = 0
