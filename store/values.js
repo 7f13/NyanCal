@@ -10,7 +10,10 @@ export const state = () => ({
 
 export const mutations = {
   handleWeightChange(state, event) {
-    state.weight = event.target.value
+    const number = event.target.value
+    if (number < 11 && number > 0) {
+      state.weight = event.target.value
+    }
   },
   handleBcsChange(state, value) {
     state.bcs = value
