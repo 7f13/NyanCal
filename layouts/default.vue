@@ -161,7 +161,12 @@ html {
     background-color: #fff;
   }
   .ant-layout-footer {
+    width: 100%;
+    padding: 0 2rem;
     height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
 
     .footer-inner-container {

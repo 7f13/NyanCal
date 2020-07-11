@@ -25,10 +25,13 @@
         <div style="display: flex; flex-direction: start; align-items: center;">
           <a-input
             type="number"
+            step="0.1"
+            min="0"
+            max="10"
             :value="weight"
             @change="handleWeightChange"
             size="large"
-            style="width: 30%; max-width: 300px;"
+            style="width: 100px;"
           />
           <span style="padding-left: 8px;">Kg</span>
         </div>
