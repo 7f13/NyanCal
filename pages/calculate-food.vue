@@ -41,10 +41,12 @@
           餌に含まれる100gあたりのカロリー
         </div>
         <div style="display: flex; flex-direction: start; align-items: center;">
-          <a-input-number
+          <a-input
             :value="foodCalorie"
             @change="handleFoodCalorieChange"
+            type="number"
             :min="0"
+            ```
             :max="500"
             :step="1"
             size="large"
