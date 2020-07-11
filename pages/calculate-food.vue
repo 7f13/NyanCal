@@ -45,10 +45,9 @@
             :value="foodCalorie"
             @change="handleFoodCalorieChange"
             type="number"
-            :min="0"
-            ```
-            :max="500"
-            :step="1"
+            min="0"
+            max="500"
+            step="1"
             size="large"
             style="width: 100px;"
           />
