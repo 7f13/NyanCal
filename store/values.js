@@ -18,8 +18,8 @@ export const mutations = {
   handleEatTimesChange(state, event) {
     state.eatTimes = event.target.value
   },
-  handleFoodCalorieChange(state, value) {
-    state.foodCalorie = value
+  handleFoodCalorieChange(state, event) {
+    state.foodCalorie = event.target.value
   },
   handleLifeStageChange(state, value) {
     state.lifeStage = value
