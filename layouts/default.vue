@@ -17,21 +17,18 @@
     </a-layout-content>
     <a-layout-footer>
       <div class="footer-inner-container">
-        <nuxt-link to="/term-of-service">
-          利用規約について
-        </nuxt-link>
-        <nuxt-link to="/credit">
-          クレジット
-        </nuxt-link>
-        <a href="https://twitter.com/NeoSavage_" target="_blank">
-          お問い合わせ
-        </a>
+        <nuxt-link to="/term-of-service">利用規約について</nuxt-link>
+        <nuxt-link to="/credit">クレジット</nuxt-link>
+        <a href="https://twitter.com/NeoSavage_" target="_blank"
+          >お問い合わせ</a
+        >
       </div>
     </a-layout-footer>
     <a-modal v-model="visible" title="アプリの使い方" class="howto-modal">
-      <div @click="closeModal" class="modal-text">
+      <div class="modal-text" @click="closeModal">
         <p style="margin-bottom: 1rem;">
-          アプリの使い方をご説明します。<br />使い方はとてもシンプルです!
+          アプリの使い方をご説明します。
+          <br />使い方はとてもシンプルです!
         </p>
         <p>① 画面の入力欄に、猫の体重や体型などを入力します</p>
         <font-awesome-icon icon="arrow-down" />
@@ -49,20 +46,20 @@
         </div>
         <p>以下のどちらかからスタートしてください😼</p>
         <div style="margin: 1rem 0;">
-          <nuxt-link to="/calculate-calorie" style="color: rbg(28, 28, 28);">
-            簡易バージョン(1歳以上の猫・去勢済み前提)→
-          </nuxt-link>
+          <nuxt-link to="/calculate-calorie" style="color: rbg(28, 28, 28);"
+            >簡易バージョン(1歳以上の猫・去勢済み前提)→</nuxt-link
+          >
         </div>
         <div>
-          <nuxt-link to="/calculate-calorie-more">
-            詳細バージョン(選択肢多)→
-          </nuxt-link>
+          <nuxt-link to="/calculate-calorie-more"
+            >詳細バージョン(選択肢多)→</nuxt-link
+          >
         </div>
       </div>
       <template slot="footer">
-        <a-button key="ok" type="primary" @click="handleCancel">
-          閉じる
-        </a-button>
+        <a-button key="ok" type="primary" @click="handleCancel"
+          >閉じる</a-button
+        >
       </template>
     </a-modal>
   </a-layout>
@@ -89,6 +86,7 @@ export default {
 .howto-modal {
   color: rgb(48, 48, 48);
   font-weight: 500;
+  top: 20px;
   a {
     color: #4f4f4f;
     font-weight: 700;

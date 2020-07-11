@@ -25,13 +25,13 @@
         <div style="display: flex; flex-direction: start; align-items: center;">
           <a-input
             :value="eatTimes"
-            @change="handleEatTimesChange"
             type="number"
             :min="0"
             :max="10"
             :step="1"
             size="large"
             style="width: 100px;"
+            @change="handleEatTimesChange"
           />
           <span style="padding-left: 8px;">回</span>
         </div>
@@ -43,13 +43,13 @@
         <div style="display: flex; flex-direction: start; align-items: center;">
           <a-input
             :value="foodCalorie"
-            @change="handleFoodCalorieChange"
             type="number"
             min="0"
             max="500"
             step="1"
             size="large"
             style="width: 100px;"
+            @change="handleFoodCalorieChange"
           />
           <span style="padding-left: 8px;">Kcal</span>
         </div>

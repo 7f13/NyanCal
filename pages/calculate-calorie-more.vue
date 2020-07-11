@@ -29,9 +29,9 @@
             min="0"
             max="10"
             :value="weight"
-            @change="handleWeightChange"
             size="large"
             style="width: 100px;"
+            @change="handleWeightChange"
           />
           <span style="padding-left: 8px;">Kg</span>
         </div>
@@ -42,10 +42,10 @@
         </div>
         <a-select
           :value="lifeStage"
-          @change="handleLifeStageChange"
           default-value="default"
           size="large"
           style="width: 260px;"
+          @change="handleLifeStageChange"
         >
           <a-select-option value="before4month">
             生後4ヶ月未満
@@ -79,10 +79,10 @@
         </div>
         <a-select
           :value="bcs"
-          @change="handleBcsChange"
           default-value="default"
           size="large"
           style="width: 260px;"
+          @change="handleBcsChange"
         >
           <a-select-option value="bcs3" style="width: 100%;">
             ふつう体型
