@@ -3,7 +3,7 @@
     <h1 class="app-title">猫のカロリー計算アプリ✨</h1>
     <div>
       <img
-        src="~/assets/60135.webp"
+        src="~/assets/60135.jpg"
         alt="キャットフードの画像"
         class="top-visual-image"
       />
