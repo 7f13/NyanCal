@@ -1,4 +1,8 @@
 import Vue from 'vue'
-import Antd from 'ant-design-vue/lib'
+import { Layout, Button, Select, Input, Modal } from 'ant-design-vue'
 
-Vue.use(Antd)
+Vue.use(Layout)
+Vue.use(Button)
+Vue.use(Select)
+Vue.use(Input)
+Vue.use(Modal)
