@@ -31,7 +31,7 @@
           </div>
           <div style="text-align: center;">
             <img
-              src="~/assets/60135.webp"
+              src="~/assets/60135.jpg"
               alt="使用したメインビジュアル"
               style="width: 300px; padding: 20px;"
             />

@@ -57,7 +57,7 @@
         </div>
       </div>
       <template slot="footer">
-        <a-button key="ok" type="primary" @click="handleCancel"
+        <a-button key="ok" type="primary" @click="visible = false"
           >閉じる</a-button
         >
       </template>
